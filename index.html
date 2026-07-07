@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배윤오 | Music Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Pretendard', sans-serif; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-900">
+
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur border-b border-stone-200 px-6 py-4 flex justify-between items-center">
+        <div class="text-lg font-bold tracking-tighter uppercase italic">YUNO's Music Lab</div>
+        <div class="space-x-6 text-sm font-semibold">
+            <a href="#about" class="hover:text-amber-700 transition">ABOUT</a>
+            <a href="#tracks" class="hover:text-amber-700 transition">TRACKS</a>
+            <a href="#gear" class="hover:text-amber-700 transition">GEAR</a>
+            <a href="https://padlet.com/yunobae59/padlet-1m965vqiopj5mffs" target="_blank" class="hover:text-amber-700 transition text-amber-700 font-bold">방명록</a>
+        </div>
+    </nav>
+
+    <header class="min-h-[70vh] flex flex-col justify-center px-6 lg:px-24 pt-20">
+        <h1 class="text-5xl lg:text-7xl font-bold mb-6">Sound & Soul<br><span class="text-amber-700">뮤지션 배윤오</span></h1>
+        <p class="text-xl text-stone-600 max-w-xl mb-8">감정을 선율로 기록하고, 일상의 소리에 새로운 질감을 더하는 작업을 합니다.</p>
+        <div class="flex gap-4">
+            <a href="#tracks" class="bg-stone-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-stone-700 transition">음악 들어보기</a>
+        </div>
+    </header>
+
+    <section id="about" class="py-24 px-6 lg:px-24 bg-white">
+        <div class="max-w-4xl">
+            <h2 class="text-3xl font-bold mb-12 border-l-4 border-amber-700 pl-4">About Me</h2>
+            <p class="text-lg text-stone-700 leading-relaxed">
+                건축공학을 공부하며 공간을 이해하고, 음악을 통해 그 공간의 무드를 완성하는 것을 즐깁니다. 
+                주로 미니멀한 어쿠스틱 사운드와 신디사이저의 앰비언트한 질감을 결합한 곡들을 제작합니다.
+            </p>
+        </div>
+    </section>
+
+    <section id="tracks" class="py-24 px-6 lg:px-24 bg-stone-900 text-stone-100">
+        <div class="max-w-6xl">
+            <h2 class="text-3xl font-bold mb-12 border-l-4 border-amber-600 pl-4">Featured Tracks</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-stone-800 p-6 rounded-xl border border-stone-700">
+                    <span class="text-amber-500 text-sm">2026.06</span>
+                    <h3 class="text-xl font-bold mt-2">Midnight Concrete</h3>
+                    <p class="text-stone-400 mt-2 text-sm">도시의 야경을 모티브로 한 앰비언트 트랙. 밤의 적막과 도시의 소음을 피아노로 표현했습니다.</p>
+                </div>
+                <div class="bg-stone-800 p-6 rounded-xl border border-stone-700">
+                    <span class="text-amber-500 text-sm">2026.03</span>
+                    <h3 class="text-xl font-bold mt-2">Blueprints in G Major</h3>
+                    <p class="text-stone-400 mt-2 text-sm">도면의 선들을 따라가는 듯한 리듬감 있는 기타 연주곡입니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gear" class="py-24 px-6 lg:px-24 bg-stone-50">
+        <div class="max-w-5xl">
+            <h2 class="text-3xl font-bold mb-12 border-l-4 border-amber-700 pl-4">Equipment</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-4 bg-white border border-stone-200 rounded shadow-sm text-center">DAW: Ableton Live</div>
+                <div class="p-4 bg-white border border-stone-200 rounded shadow-sm text-center">Interface: Apollo Solo</div>
+                <div class="p-4 bg-white border border-stone-200 rounded shadow-sm text-center">Keyboard: Komplete Kontrol</div>
+                <div class="p-4 bg-white border border-stone-200 rounded shadow-sm text-center">Mic: Shure SM7B</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 px-6 text-center text-stone-500 text-sm">
+        © 2026 배윤오. All rights reserved.
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
